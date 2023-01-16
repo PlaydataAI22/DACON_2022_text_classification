@@ -14,7 +14,22 @@
 #### [참가 자격]
 일반인, 학생 등 누구나    
 https://dacon.io/competitions/official/236037/overview/description
+    
 
-# 최종 성적(51/333)
+## 최종 성적(51/333)
 평가방법: Weighted F1 Score    
 최종 점수: 0.74317 (대회 1위 점수 0.75854)
+     
+   
+## 데이터 특성 
+데이터는 문어체 형태로, 비표준어나 비문이 거의 없는 형태였음  
+     
+예시문장: 이에 항공사들은 살아남기 위해 운항, 객실, 정비, 지원 등의 업무를 하고 있는 임직원들도 무급 및 유급 휴가와 임금 삭감 등의 회사 방침에 묵묵히 따르고 있으며, 정부 부처와 유관 기관들도 심각성을 깨닫고 실제 체감이 되는 방향으로 방안을 마련 중이나 역부족인 상황이다.    
+    
+    
+## 데이터 증식
+MLM(https://github.com/seoyeon9646/MLM-data-augmentation)과 Back Translation을 통해 데이터를 증식하였음
+
+
+## 사용 모델
+KpfBert, KoElectra, KoBert 모델을 학습시켰고 KpfBert 5-Folds 모델이 가장 좋은 성능을 보였음
